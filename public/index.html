@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./favicon.png" />
+    <title>SuperChat</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="main">
+            <navigation></navigation>
+            <router-view></router-view>
+        </div>
+    </div>
+
+
+
+    <!-- templates Componets -->
+    <template id="navigation">
+        <div>
+            <nav class="nav">
+                <div class="nav-logo">
+                    SuperChat
+                </div>
+                <div class="nav-links">
+                    <router-link to="/" class="nav-link" active-class="nav-link-active" exact>Home</router-link>
+                    <router-link to="/info" class="nav-link" active-class="nav-link-active" exact>Info</router-link>
+                </div>
+                
+                <div @click="toggleMobile()" class="menu-mobile">Menu</div>
+                <div id="navLinks" @click="toggleMobile()" :class="classMenuMobile">
+                    <router-link to="/" class="nav-link-mobile" active-class="nav-link-active" exact>Home</router-link>
+                    <router-link to="/info" class="nav-link-mobile" active-class="nav-link-active" exact>Info</router-link>
+                </div>
+            </nav>
+        </div>
+    </template>
+    <!-- /templates Componets -->
+
+    <!-- templates Routes -->
+    <template id="home">
+        <div class="container">
+           <aside class="menu-aside">
+             <div class="card">
+               <span>Contatos</span>
+               <ul>
+                 <li>
+                   <img src="https://picsum.photos/50">
+                   Carlos
+                 </li>
+                 <li>
+                   <img src="https://picsum.photos/200">
+                   Mônica
+                 </li>
+                 <li>
+                   <img src="https://picsum.photos/200">
+                   João
+                 </li>
+               </ul>
+             </div>
+           </aside>
+           <section class="content-main">
+             <div class="statusChat">
+                 <div class="contact-profile">
+                   <img src="https://picsum.photos/200">
+                   João
+                 </div>
+                 
+                 <div class="contact-status">
+                   Online
+                 </div>
+             </div>
+             <div class="card-section">
+               <div id="messagemsCard" class="messagems">
+                 
+                 <div class="messagem-contact">
+                   <span>03:24</span>
+                   Oi tudo bem.
+                 </div>
+                 <div class="messagem-user">
+                   <span>03:24</span>
+                   tudo e vc?
+                 </div>
+                 <div class="messagem-contact">
+                   <span>03:24</span>
+                   Recebeu o texto
+                 </div>
+                 <div class="messagem-user">
+                   <span>03:24</span>
+                   não.
+                 </div>
+                 <div class="messagem-contact">
+                   <span>03:24</span>
+                   blz vou te enviar.
+                 </div>
+                 <div class="messagem-user">
+                   <span>03:24</span>
+                   Organiza as linhas dentro de um flex container quando há espaço extra no eixo transversal, similar ao modo como justify-content alinha ítens individuais dentro do eixo principal.
+                 </div>
+                 
+               </div>
+               
+               
+               <div class="entrada">
+                  <textarea id="textArea"></textarea>
+                  <button>Send</button>
+               </div>
+             </div>
+           </section>
+        </div>
+    </template>
+
+    <template id="info">
+        <div>
+            info
+        </div>
+    </template>
+    <!-- /templates Routes -->
+
+
+    <script src="js/dexie.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/vue-router.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

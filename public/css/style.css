@@ -1,0 +1,399 @@
+/*
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,900;1,700&display=swap');
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+
+        /* ---- cores ----*/
+        --color-bg: #7da29d;
+        --color-defalt: #ddd;
+        --color-gray: #222;
+        --color-black: #020206;
+        --color-white: #fffafa;
+        --color-green-light: #8cdd85;
+        --color-green: #4dcb42;
+        --color-green-dark: #154012;
+        /* cor blue*/
+        --color-primary-light: #73c3ec;
+        --color-primary: #1a86bd;
+        --color-primary-dark: #051c28;
+        --color-primary-dark-l: #072737;
+        /* cor Pink*/
+        --color-pink-light: #f96892;
+        --color-pink: #b00738;
+        --color-pink-dark: #6f0423;
+        --color-primary-dark-full: #0d0104;
+        --color-yellow-light: #ffd880;
+        --color-yellow: #ffb91a;
+        --color-yellow-dark: #d59400;
+        
+        --color-chat-contact: #0f5273 ;
+        --color-chat-user: #0d4764;
+}
+
+.main {
+    background: var(--color-white);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    border-style: ridge;
+    border-bottom: ridge 1px #000;
+    background: var(--color-primary-dark);
+}
+.nav-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 15px;
+    color: var(--color-white);
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 1.4px;
+}
+.nav-logo:hover {
+    transition: background-color 0.2s ease-in-out, transform 150ms ease;
+    background: var(--color-primary-dark-l);
+    color: var(--color-white)
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 25px;
+    color: var(--color-white);
+}
+.nav-link:hover{
+    transition: background-color 0.2s ease-in-out, transform 150ms ease;
+    background: var(--color-primary-dark-l);
+    color: var(--color-white)
+}
+
+.nav-link-active {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 25px;
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.menu-mobile { 
+    display: none;
+}
+
+.nav-links-mobile {
+    display: none;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    font-size: 35px;
+    letter-spacing: 1.4px;
+    font-weight: 800;
+}
+
+h2 {
+    padding: 10px 20px;
+}
+.paragrafo {
+    padding: 5px 25px;
+    letter-spacing: 0.9px;
+    font-weight: 200;
+    text-justify: inter-word;
+}
+
+.container {
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.menu-aside {
+  background: var(--color-bg);
+  width: 360px;
+  height: 100vh;
+}
+
+.content-main {
+  background: var(--color-bg);
+  width: 100%;
+}
+
+.card {
+  background: var(--color-gray);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  
+  
+  margin: 5px;
+  padding: 3px 2px;
+  border-radius: 5px;
+}
+
+.card > span {
+  color: var(--color-white);
+  font-weight: 600;
+  padding-left: 5px;
+}
+
+.card > ul {
+  list-style: none;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.card > ul > li {
+  background: var(--color-primary-dark-l);
+  color: var(--color-white);
+  font-size: 16px;
+  padding: 10px;
+  
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: solid 1px #000;
+}
+
+.card > ul > li > img {
+  width: 50px;
+  height: 50px;
+  background: var(--color-white);
+  border-radius: 25px;
+  margin: 0px 15px 0px 0px;
+}
+
+.card-section {
+  background: #cdc;/*var(--color-defalt);*/
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 500px;
+  
+  margin: 0px 5px 5px 5px;
+  padding: 10px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.statusChat {
+  background: var(--color-primary-dark-l);
+  color: var(--color-white);
+  font-size: 16px;
+  margin: 5px 5px 0px 5px;
+  padding: 10px;
+  border-radius: 5px 5px 0px 0px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-profile {
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact-profile > img {
+  width: 50px;
+  height: 50px;
+  background: var(--color-white);
+  border-radius: 25px;
+  margin: 0px 15px 0px 0px;
+}
+
+.contact-status {
+  font-size: 12px;
+  padding-right: 10px;
+  color: var(--color-green);
+}
+
+.messagems {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: scroll;
+  scroll
+}
+
+.messagem-contact {
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  background: var(--color-primary-dark-l);
+  margin: 5px 0px;
+  padding: 5px 25px 5px 10px;
+  border-radius: 3px 15px 15px 3px;
+  color: var(--color-white);
+  letter-spacing: 1.4px;
+  border-left: solid 7px var(--color-pink-dark);
+}
+
+.messagem-user {
+  display: flex;
+  align-self: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%; 
+  background: var(--color-primary-dark-l);
+  margin: 5px 0px;
+  padding: 5px 25px 5px 10px;
+  border-radius: 15px 3px 3px 15px;
+  color: var(--color-white);
+  letter-spacing: 1.4px;
+  border-right: solid 7px var(--color-primary);
+}
+
+.messagem-contact > span {
+  display: flex;
+  align-self: flex-end;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.messagem-user > span {
+  display: flex;
+  align-self: flex-end;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+
+.card-section > .entrada {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+.card-section > .entrada > textarea {
+  width: 100%;
+  height: 50px;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.card-section > .entrada > button {
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+  font-weight: 600;
+  padding: 0px 15px;
+  border-radius: 0px 3px 3px 0px;
+}
+
+
+@media (max-width: 767px) {
+    .nav-links{
+        display: none;
+    }
+    .menu-mobile { 
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 10px;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--color-white);
+    }
+    .menu-mobile:hover {
+        transition: background-color 0.2s ease-in-out, transform 150ms ease;
+        background: var(--color-primary-dark-l);
+        color: var(--color-white)
+    }
+    
+    @keyframes animate-div {
+        from {
+            opacity: 0;
+            margin-right: -350px;
+        }
+        to {
+            opacity: 1;
+            margin-right: 0px;
+        }
+    }
+
+    @keyframes animate-div-1 {
+        from {
+            opacity: 1;
+            margin-right: 0px;
+        }
+        to {
+            opacity: 0;
+            margin-right: -350px;
+        }
+    }
+
+    .nav-links-mobile {
+        animation: animate-div 0.7s;
+        display: block;
+        background: var(--color-primary-dark);
+        position: absolute;
+        top: 54px;
+        right: 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .nav-link-mobile {
+        display: flex;
+        justify-content: center;
+        width: 99%;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1.2px;
+        padding: 10px 0px;
+        color: var(--color-white);
+   }
+   
+   .none {
+     display: none;
+   }
+   
+   .container {
+     background: var(--color-bg);
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+   }
+   
+   .menu-aside {
+    background: var(--color-bg);
+    width: 360px;
+    height: 100%;
+   }
+   
+   .messagem-contact {
+     width: 85%;
+   }
+   .messagem-user {
+     width: 85%;
+   }
+}
